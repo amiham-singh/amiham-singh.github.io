@@ -24,15 +24,22 @@
 
     <!-- Theme CSS -->
     <link href="css/creative.min.css" rel="stylesheet">
+    <link href="http://www.justinaguilar.com/animations/css/animations.css" rel="stylesheet">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-    <style type="text/css">
-    ${demo.css}
-        </style>
    
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-     
+
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+     <link href='http://www.justinaguilar.com/animations/css/animations.css' rel="stylesheet">
+     <style type="text/css">
+         #head1, #head2 ,#head3, #head4, #head5, #fox, #cnn,#wt,#wp,#ct,#nyt,#lt,#slate {visibility: hidden;}
+         .bounce, .pulse, .floating, .tossing, .pullUp, .pullDown, .stretchLeft, .stretchRight, .slideLeft{
+            visibility: visible !important; }
+    
+
+
+     </style>
 </head>
 
 <body id="page-top">
@@ -40,7 +47,7 @@
     <header>
         <div class="header-content">
             <div class="header-content-inner">
-                <h1 id="homeHeading" class = "animated fadeInUp">Trump and the media</h1>
+                <h1 id="homeHeading" class = "animated slideUp">Trump and the media</h1>
                 <hr>
                 <p><a href="https://github.com/amiham-singh"><font color="white">Mahima Singh</font></a></p>
                 
@@ -79,7 +86,7 @@
             <div class="row">
                 <div class="col-lg-12 ">
                 <hr class="primary">
-                <center><h2 class="section-heading">Text Analysis</h2></center>
+                <center><h2 id="head1" class="section-heading animate ">Text Analysis</h2></center>
                 <br>
                     <p>There have been <a href="http://www.npr.org/2017/04/13/523709894/using-sentiment-analysis-to-understand-trumps-tweets">multiple</a> sentiment analyses done on Mr. Trump’s social media posts. While these projects make the news and garner online attention, <a href="http://thehill.com/homenews/media/321781-analysis-only-3-percent-of-reports-on-cbs-nbc-positive-for-trump">few</a> analyses have been on the <a href="https://www.theatlantic.com/technology/archive/2016/10/a-computers-hot-take-on-2016/504575/">media</a> itself.  During the presidential campaign in 2016, Data Face ran a <a href="http://thedataface.com/trump-media-analysis/">text analysis</a> on news articles about Trump and Clinton. The results gained a lot of media attention and in fact steered conversation. I planned to follow a similar approach. For the final project of our Natural Language processing class at Syracuse University Daniela Fernández Espinosa from the information school ( Syracuse University), James Troncale from the linguistics department (Syracuse University) and I  built a prototype sentiment analyzer to help political figures make better strategy plans. The results of that analysis are posted here.</p>
                     
@@ -92,7 +99,7 @@
             <div class="row">
                 <div class="col-lg-12 ">
                 <hr class="primary">
-                <center><h2 class="section-heading">Sentiment in Media</h2></center>
+                <center><h2 id="head2" class="section-heading">Sentiment in Media</h2></center>
                 <br><script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
 
@@ -100,61 +107,7 @@
 
 
 
-        <script type="text/javascript">
-
-Highcharts.chart('container1', {
-    chart: {
-        type: 'column'
-    },
-    title: {
-        text: 'News Media Polarity'
-    },
-    // subtitle: {
-    //     text: 'Source: WorldClimate.com'
-    // },
-    xAxis: {
-        categories: [
-            'Negative',
-            'Neutral',
-            'Positive',
-            
-        ],
-        crosshair: true
-    },
-    yAxis: {
-        min: 0,
-        title: {
-            text: 'Percent'
-        }
-    },
-    tooltip: {
-        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-            '<td style="padding:0"><b>{point.y:.1f} %</b></td></tr>',
-        footerFormat: '</table>',
-        shared: true,
-        useHTML: true
-    },
-    plotOptions: {
-        column: {
-            pointPadding: 0.2,
-            borderWidth: 0
-        }
-    },
-    series: [{
-        name: 'Before inauguration',
-        color: "#FFD700",
-        data: [38.44, 36.85, 24.7]
-
-    
-    }, {
-        name: 'After inauguration',
-        color: "#FF8C00",
-        data: [43.71, 35.85, 20.43]
-
-    }]
-});
-        </script>
+        
                     <p>There isn’t a very big shift in polarity, but we can see that the percent of negative articles increased after his inauguration while the percent of positive and neutral articles went down. The high percent of neutral articles represents news media’s objectivity. <br> What is more interesting is when we break down this tally, source wise. </p>
                     
                     
@@ -167,7 +120,7 @@ Highcharts.chart('container1', {
             
                 
                 <hr class="primary">
-                <center><h2 class="section-heading">Source Break UP</h2></center>
+                <center><h2 id="head3" class="section-heading">Source Break UP</h2></center>
 
 
 
@@ -281,7 +234,7 @@ Highcharts.chart('container1', {
             <div class="row">
                 <div class="col-lg-12 text-center">
                 <hr class="primary">
-                    <h2 class="section-heading">Methodology</h2>
+                    <h2 id="head4" class="section-heading">Methodology</h2>
                     
                 </div>
             </div>
@@ -344,7 +297,7 @@ Highcharts.chart('container1', {
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <center><h2 class="section-heading">Sample set of Data </h2></center>
+                    <center><h2 id="head5" class="section-heading">Sample set of Data </h2></center>
                     <hr class="primary">
                     <p>Presented below is a sample of the data we used for this analysis. The tags in the list were generated by the computer. As you will see, not all the tags are accurate, as subjectivity depends on the reader as well.</p>
          <div class="col-lg-8 col-lg-offset-2">
@@ -411,6 +364,10 @@ Highcharts.chart('container1', {
             text: 'Percent'
         }
     },
+     credits: {
+      enabled: false
+  },
+  exporting: { enabled: false },
     tooltip: {
         headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
         pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
@@ -452,6 +409,9 @@ $(document).ready(function () {
         title: {
             text: ''
         },
+         credits: {
+      enabled: false
+                     },
         
         xAxis: [{
             categories: categories,
@@ -509,6 +469,9 @@ Highcharts.chart('cnn', {
     title: {
         text: ''
     },
+     credits: {
+      enabled: false
+                     },
 
     exporting: { enabled: false },
     xAxis: {
@@ -557,6 +520,9 @@ Highcharts.chart('fox', {
     title: {
         text: ''
     },
+     credits: {
+      enabled: false
+                     },
 
     exporting: { enabled: false },
     xAxis: {
@@ -610,6 +576,11 @@ $(document).ready(function () {
         title: {
             text: ''
         },
+        credits: {
+      enabled: false
+                     },
+
+    exporting: { enabled: false },
         
         xAxis: [{
             categories: categories,
@@ -669,7 +640,11 @@ $(document).ready(function () {
         chart: {
             type: 'bar'
         },
-        exporting: { enabled: false },
+        credits: {
+      enabled: false
+                     },
+
+    exporting: { enabled: false },
         title: {
             text: ''
         },
@@ -730,6 +705,10 @@ $(document).ready(function () {
         text: ''
     },
 
+    credits: {
+      enabled: false
+                     },
+
     exporting: { enabled: false },
     xAxis: {
        categories: ['Negative', 'Neutral', "Positive"]
@@ -776,6 +755,10 @@ Highcharts.chart('wp', {
     title: {
         text: ''
     },
+
+    credits: {
+      enabled: false
+                     },
 
     exporting: { enabled: false },
     xAxis: {
@@ -836,6 +819,11 @@ $(document).ready(function () {
             }
      
         }],
+        credits: {
+      enabled: false
+                     },
+
+    exporting: { enabled: false },
         yAxis: {
             title: {
                 text: null
@@ -876,8 +864,180 @@ $(document).ready(function () {
 
         </script>
         
-        <!-- begin analytics -->
-        
+       <script>
+
+        $(window).scroll(function() {
+            $('#head1').each(function(){
+            var imagePos = $(this).offset().top;
+            
+            var topOfWindow = $(window).scrollTop();
+                if (imagePos < topOfWindow+500) {
+                    $(this).addClass("pullDown");
+                }
+                else if (imagePos > topOfWindow+800){
+                    $(this).removeClass("pullDown");
+                }
+                
+            });
+
+            $('#head2').each(function(){
+            var imagePos = $(this).offset().top;
+            
+            var topOfWindow = $(window).scrollTop();
+                if (imagePos < topOfWindow+500) {
+                    $(this).addClass("pullDown");
+                }
+                else if (imagePos > topOfWindow+800){
+                    $(this).removeClass("pullDown");
+                }
+                
+            });
+
+            $('#head3').each(function(){
+            var imagePos = $(this).offset().top;
+            
+            var topOfWindow = $(window).scrollTop();
+                if (imagePos < topOfWindow+500) {
+                    $(this).addClass("pullDown");
+                }
+                else if (imagePos > topOfWindow+800){
+                    $(this).removeClass("pullDown");
+                }
+                
+            });
+            $('#head4').each(function(){
+            var imagePos = $(this).offset().top;
+            
+            var topOfWindow = $(window).scrollTop();
+                if (imagePos < topOfWindow+500) {
+                    $(this).addClass("pullDown");
+                }
+                else if (imagePos > topOfWindow+800){
+                    $(this).removeClass("pullDown");
+                }
+                
+            });
+            $('#head5').each(function(){
+            var imagePos = $(this).offset().top;
+            
+            var topOfWindow = $(window).scrollTop();
+                if (imagePos < topOfWindow+500) {
+                    $(this).addClass("pullDown");
+                }
+                else if (imagePos > topOfWindow+800){
+                    $(this).removeClass("pullDown");
+                }
+                
+            });
+
+             $('#ct').each(function(){
+            var imagePos = $(this).offset().top;
+            
+            var topOfWindow = $(window).scrollTop();
+                if (imagePos < topOfWindow+400) {
+                    $(this).addClass("pullDown");
+                }
+                else if (imagePos > topOfWindow+800){
+                    $(this).removeClass("pullDown");
+                }
+                
+            });
+
+              $('#cnn').each(function(){
+            var imagePos = $(this).offset().top;
+            
+            var topOfWindow = $(window).scrollTop();
+                if (imagePos < topOfWindow+400) {
+                    $(this).addClass("stretchRight");
+                }
+                else if (imagePos > topOfWindow+800){
+                    $(this).removeClass("stretchRight");
+                }
+                
+            });
+
+               $('#lat').each(function(){
+            var imagePos = $(this).offset().top;
+            
+            var topOfWindow = $(window).scrollTop();
+                if (imagePos < topOfWindow+400) {
+                    $(this).addClass("pullDown");
+                }
+                else if (imagePos > topOfWindow+800){
+                    $(this).removeClass("pullDown");
+                }
+                
+            });
+
+                $('#fox').each(function(){
+            var imagePos = $(this).offset().top;
+            
+            var topOfWindow = $(window).scrollTop();
+                if (imagePos < topOfWindow+400) {
+                    $(this).addClass("stretchLeft");
+                }
+                else if (imagePos > topOfWindow+800){
+                    $(this).removeClass("stretchLeft");
+                }
+                
+            });
+
+                 $('#nyt').each(function(){
+            var imagePos = $(this).offset().top;
+            
+            var topOfWindow = $(window).scrollTop();
+                if (imagePos < topOfWindow+400) {
+                    $(this).addClass("pullDown");
+                }
+                else if (imagePos > topOfWindow+800){
+                    $(this).removeClass("pullDown");
+                }
+                
+            });
+                  $('#slate').each(function(){
+            var imagePos = $(this).offset().top;
+            
+            var topOfWindow = $(window).scrollTop();
+                if (imagePos < topOfWindow+400) {
+                    $(this).addClass("stretchLeft");
+                }
+                else if (imagePos > topOfWindow+800){
+                    $(this).removeClass("stretchLeft");
+                }
+                
+            });
+                   $('#wp').each(function(){
+            var imagePos = $(this).offset().top;
+            
+            var topOfWindow = $(window).scrollTop();
+                if (imagePos < topOfWindow+400) {
+                    $(this).addClass("stretchRight");
+                }
+                else if (imagePos > topOfWindow+800){
+                    $(this).removeClass("stretchRight");
+                }
+                
+            });
+
+             $('#wt').each(function(){
+            var imagePos = $(this).offset().top;
+            
+            var topOfWindow = $(window).scrollTop();
+                if (imagePos < topOfWindow+400) {
+                    $(this).addClass("pullDown");
+                }
+                else if (imagePos > topOfWindow+800){
+                    $(this).removeClass("pullDown");
+                }
+                
+            });
+
+
+
+
+        });
+</script>
+     
 
 </body>
 
